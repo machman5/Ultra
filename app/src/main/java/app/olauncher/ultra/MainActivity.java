@@ -536,8 +536,6 @@ public class MainActivity extends Activity implements View.OnClickListener, View
                 viewHolder.indicator.setVisibility(View.GONE);
             else viewHolder.indicator.setVisibility(View.VISIBLE);
 
-            if (flag == 0 && getCount() == 1) appClickListener.appClicked(appModel, flag);
-
             return convertView;
         }
 
