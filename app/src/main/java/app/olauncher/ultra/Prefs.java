@@ -14,19 +14,24 @@ public class Prefs {
     private static final String APP_NAME_4 = "APP_NAME_4";
     private static final String APP_NAME_5 = "APP_NAME_5";
     private static final String APP_NAME_6 = "APP_NAME_6";
+    private static final String APP_NAME_7 = "APP_NAME_7";
+    private static final String APP_NAME_8 = "APP_NAME_8";
     private static final String APP_PACKAGE_1 = "APP_PACKAGE_1";
     private static final String APP_PACKAGE_2 = "APP_PACKAGE_2";
     private static final String APP_PACKAGE_3 = "APP_PACKAGE_3";
     private static final String APP_PACKAGE_4 = "APP_PACKAGE_4";
     private static final String APP_PACKAGE_5 = "APP_PACKAGE_5";
     private static final String APP_PACKAGE_6 = "APP_PACKAGE_6";
+    private static final String APP_PACKAGE_7 = "APP_PACKAGE_7";
+    private static final String APP_PACKAGE_8 = "APP_PACKAGE_8";
     private static final String APP_USER_HANDLE_1 = "APP_USER_HANDLE_1";
     private static final String APP_USER_HANDLE_2 = "APP_USER_HANDLE_2";
     private static final String APP_USER_HANDLE_3 = "APP_USER_HANDLE_3";
     private static final String APP_USER_HANDLE_4 = "APP_USER_HANDLE_4";
     private static final String APP_USER_HANDLE_5 = "APP_USER_HANDLE_5";
     private static final String APP_USER_HANDLE_6 = "APP_USER_HANDLE_6";
-
+    private static final String APP_USER_HANDLE_7 = "APP_USER_HANDLE_7";
+    private static final String APP_USER_HANDLE_8 = "APP_USER_HANDLE_8";
 
     private final SharedPreferences sharedPreferences;
 
@@ -52,6 +57,10 @@ public class Prefs {
                 return getSharedPref().getString(APP_NAME_5, "");
             case 6:
                 return getSharedPref().getString(APP_NAME_6, "");
+            case 7:
+                return getSharedPref().getString(APP_NAME_7, "");
+            case 8:
+                return getSharedPref().getString(APP_NAME_8, "");
             default:
                 return "";
         }
@@ -71,6 +80,10 @@ public class Prefs {
                 return getSharedPref().getString(APP_PACKAGE_5, "");
             case 6:
                 return getSharedPref().getString(APP_PACKAGE_6, "");
+            case 7:
+                return getSharedPref().getString(APP_PACKAGE_7, "");
+            case 8:
+                return getSharedPref().getString(APP_PACKAGE_8, "");
             default:
                 return "";
         }
@@ -90,6 +103,10 @@ public class Prefs {
                 return getSharedPref().getString(APP_USER_HANDLE_5, "");
             case 6:
                 return getSharedPref().getString(APP_USER_HANDLE_6, "");
+            case 7:
+                return getSharedPref().getString(APP_USER_HANDLE_7, "");
+            case 8:
+                return getSharedPref().getString(APP_USER_HANDLE_8, "");
             default:
                 return "";
         }
@@ -126,6 +143,16 @@ public class Prefs {
                 getSharedPref().edit().putString(APP_NAME_6, app.appLabel).apply();
                 getSharedPref().edit().putString(APP_PACKAGE_6, app.appPackage).apply();
                 getSharedPref().edit().putString(APP_USER_HANDLE_6, app.userHandle.toString()).apply();
+                break;
+            case 7:
+                getSharedPref().edit().putString(APP_NAME_7, app.appLabel).apply();
+                getSharedPref().edit().putString(APP_PACKAGE_7, app.appPackage).apply();
+                getSharedPref().edit().putString(APP_USER_HANDLE_7, app.userHandle.toString()).apply();
+                break;
+            case 8:
+                getSharedPref().edit().putString(APP_NAME_8, app.appLabel).apply();
+                getSharedPref().edit().putString(APP_PACKAGE_8, app.appPackage).apply();
+                getSharedPref().edit().putString(APP_USER_HANDLE_8, app.userHandle.toString()).apply();
                 break;
         }
     }

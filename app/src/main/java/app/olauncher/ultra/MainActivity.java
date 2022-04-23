@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements View.OnClickListener, View
     private ListView appListView;
     private AppAdapter appAdapter;
     private LinearLayout homeAppsLayout;
-    private TextView homeApp1, homeApp2, homeApp3, homeApp4, homeApp5, homeApp6, setDefaultLauncher;
+    private TextView homeApp1, homeApp2, homeApp3, homeApp4, homeApp5, homeApp6, homeApp7, homeApp8, setDefaultLauncher;
 
     public interface AppClickListener {
         void appClicked(AppModel appModel, int flag);
@@ -149,6 +149,8 @@ public class MainActivity extends Activity implements View.OnClickListener, View
         homeApp4 = findViewById(R.id.home_app_4);
         homeApp5 = findViewById(R.id.home_app_5);
         homeApp6 = findViewById(R.id.home_app_6);
+        homeApp7 = findViewById(R.id.home_app_7);
+        homeApp8 = findViewById(R.id.home_app_8);
 
         homeApp1.setOnClickListener(this);
         homeApp2.setOnClickListener(this);
@@ -156,6 +158,9 @@ public class MainActivity extends Activity implements View.OnClickListener, View
         homeApp4.setOnClickListener(this);
         homeApp5.setOnClickListener(this);
         homeApp6.setOnClickListener(this);
+        homeApp7.setOnClickListener(this);
+        homeApp8.setOnClickListener(this);
+
 
         homeApp1.setOnLongClickListener(this);
         homeApp2.setOnLongClickListener(this);
@@ -163,6 +168,8 @@ public class MainActivity extends Activity implements View.OnClickListener, View
         homeApp4.setOnLongClickListener(this);
         homeApp5.setOnLongClickListener(this);
         homeApp6.setOnLongClickListener(this);
+        homeApp7.setOnLongClickListener(this);
+        homeApp8.setOnLongClickListener(this);
     }
 
     private void populateHomeApps() {
@@ -172,6 +179,8 @@ public class MainActivity extends Activity implements View.OnClickListener, View
         homeApp4.setText(prefs.getAppName(4));
         homeApp5.setText(prefs.getAppName(5));
         homeApp6.setText(prefs.getAppName(6));
+        homeApp7.setText(prefs.getAppName(7));
+        homeApp8.setText(prefs.getAppName(8));
     }
 
     private void showLongPressToast() {
