@@ -1,8 +1,8 @@
 # Ultra
 
-### Fork of Ultra minimal launcher app for Android (22kB)
+### Fork of Ultra minimal launcher app for Android (24kB)
 
-This fork removes auto-open feature of the original when only one search result remained.
+This fork removes auto-open feature of the original when only one search result remained and adds two more home app slots.
 
 ### Download this version via [APK release](https://github.com/viktoracoric/Ultra/releases/)
 
