@@ -10,13 +10,38 @@
     <LinearLayout
         android:id="@+id/home_apps_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="595dp"
         android:layout_gravity="center_vertical"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="32dp"
         android:animateLayoutChanges="true"
         android:gravity="center_vertical"
         android:orientation="vertical">
+
+        <TextClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:format12Hour="hh:mm"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            tools:text="02:34" />
+
+        <TextClock
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="EEEE, dd MMM"
+            android:format24Hour="EEEE, dd MMM"
+            android:paddingHorizontal="2dp"
+            android:textColor="@android:color/white"
+            tools:text="Thu, 30 Dec" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/home_app_1"
