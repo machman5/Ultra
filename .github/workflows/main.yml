@@ -1,5 +1,8 @@
-- name: Checkout: Code 
-uses: actions/checkout@v2       
+- name: Checkout
+  uses: actions/checkout@v6
+  with:
+  permissions:
+  contents: read
 - name: "Checkout: Code (PR)"       
 uses: actions/checkout@v2       
 if: "contains(github.event_name, 'pull_request')"       
