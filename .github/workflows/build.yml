@@ -1,0 +1,25 @@
+- uses: WaterLemons2k/apk-action@v1
+  with:
+    # Contents of the keystore file (.jks), base64 encoded
+    keystore: ${{ secrets.KEYSTORE }}
+    # Password of the keystore
+    keystore-password: ${{ secrets.KEYSTORE_PASSWORD }}
+    # Alias of the key
+    key-alias: ${{ secrets.KEY_ALIAS }}
+    # Password of the key
+    key-password: ${{ secrets.KEY_PASSWORD }}
+
+    # Optioanl
+    #
+    # The Java version to set up
+    # Default: see `src/java-version.js`
+    java-version: ''
+    # The arguments passed to Gradle
+    # Default: '--no-daemon'
+    gradle-args: ''
+    # Whether to build a release or debug APK
+    # Default: 'true'
+    release: true
+    - uses: softprops/action-gh-release@v2
+  with:
+    files: app/build/outputs/apk/release/*.apk
