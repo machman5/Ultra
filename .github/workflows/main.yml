@@ -3,7 +3,7 @@
   with:
   permissions:
   contents: read
-- name: Checkout: Code (PR)  
+- name: Checkout: (Code (PR)  
 uses: actions/checkout@v2       
 if: "contains(github.event_name, 'pull_request')"       
 with:         ref: ${{github.event.pull_request.head.ref}}         
